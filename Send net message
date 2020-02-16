@@ -1,0 +1,10 @@
+import socket
+import time
+target_ip = '192.168.137.2'
+send_socket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+destination_address = (target_ip,10001)
+
+while(True):
+    print('sending')
+    send_socket.sendto(b'我是ChaCha'，destination_address)
+    time.sleep(2)
